@@ -1,0 +1,18 @@
+// SPDX-License-Identifier:MIT
+
+pragma solidity ^0.8.0;
+
+contract byteExample{
+    bytes1 public var1 = 'a';
+    bytes2 public var2 = 'ab';
+    bytes3 public var3 = 'abc';
+    bytes4 public var4 = 0x12345678;
+    
+    function getByte(uint i) public view returns(bytes1){
+        return var3[i];
+    }
+    
+    function getLength() public view returns(uint){
+        return var3.length;
+    }
+}
