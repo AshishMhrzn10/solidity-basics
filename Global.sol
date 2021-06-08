@@ -63,5 +63,15 @@ contract Global{
     function getOriginAddr() public view returns(address){
         return tx.origin;
     }
+
+     //this
+    function getThis()public view returns (uint){
+        return address(this).balance;
+    }
+    
+    //selfdestruct 
+    function selfDestruct(address payable _address)public{
+        selfdestruct(_address);
+    }
     
 }
